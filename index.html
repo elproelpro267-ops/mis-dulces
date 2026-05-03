@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulces Árabes Valencia 🍯</title>
+    <style>
+        body { font-family: sans-serif; background-color: #fdfaf0; margin: 0; text-align: center; color: #4e342e; }
+        header { background-color: #4e342e; color: #d4af37; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .btn-mapa { background-color: #d4af37; color: #4e342e; padding: 12px 25px; text-decoration: none; font-weight: bold; display: inline-block; margin: 15px; border-radius: 50px; border: 2px solid #4e342e; text-transform: uppercase; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; gap: 20px; }
+        .card { background: white; border: 1px solid #ddd; width: 280px; border-radius: 20px; overflow: hidden; box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 230px; object-fit: cover; background: #eee; }
+        .info { padding: 15px; }
+        .precio { color: #2e7d32; font-size: 1.6em; font-weight: bold; margin: 10px 0; }
+        .btn-comprar { background: #25d366; color: white; text-decoration: none; padding: 15px; display: block; font-weight: bold; font-size: 1.2em; text-transform: uppercase; border-radius: 0 0 20px 20px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🍯 Dulces Árabes Valencia</h1>
+    <p>Calidad Artesanal Directo a tu Casa</p>
+    <a href="Https://maps.app.goo.gl/iy1JkdPYu8TJQ6Qr6" target="_blank" class="btn-mapa">📍 VER UBICACIÓN</a>
+</header>
+
+<div class="container">
+    <script>
+        // NOMBRES SACADOS DE TU FOTO
+        const productos = [
+            { n: "Baklava Clásica de Nuez", f: "unnamed (1).jpg" },
+            { n: "Nidos de Pistacho", f: "unnamed (2).jpg" },
+            { n: "Basbousa (Dulce de Sémola)", f: "unnamed (3).jpg" },
+            { n: "Deditos de Novia (Cashew)", f: "unnamed (4).jpg" },
+            { n: "Surtido Especial 12 pzs", f: "unnamed (5).jpg" },
+            { n: "Baklava de Chocolate", f: "unnamed (6).jpg" },
+            { n: "Maamoul de Dátil", f: "unnamed (7).jpg" },
+            { n: "Bocados de Miel", f: "unnamed (8).jpg" },
+            { n: "Caja Regalo Premium", f: "unnamed (9).jpg" },
+            { n: "Variedad de la Casa", f: "unnamed (10).jpg" }
+        ];
+        
+        productos.forEach((p) => {
+            document.write(`
+                <div class="card">
+                    <img src="${p.f}" onerror="this.src='https://via.placeholder.com/300x200?text=${p.n}'">
+                    <div class="info">
+                        <h3>${p.n}</h3>
+                        <p class="precio">$15.00</p>
+                    </div>
+                    <a href="https://wa.me/584121417035?text=Hola! Quiero COMPRAR: ${p.n}. ¿Cómo hacemos con la entrega?" class="btn-comprar">COMPRAR</a>
+                </div>
+            `);
+        });
+    </script>
+</div>
+
+</body>
+</html>
